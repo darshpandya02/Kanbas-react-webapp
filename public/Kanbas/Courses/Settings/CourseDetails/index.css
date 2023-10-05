@@ -1,0 +1,11 @@
+button {
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    color: red;
+}
+
+.button-active {
+    color: red;
+
+}

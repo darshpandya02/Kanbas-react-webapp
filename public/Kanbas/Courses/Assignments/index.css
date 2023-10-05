@@ -1,0 +1,13 @@
+.assignments .top-buttons button {
+    background-color: lightgray;
+    border: none;
+    border-radius: 0px;
+}
+
+.assignments .second a {
+    text-decoration: none;
+}
+
+input {
+    border: 1px solid black;
+}

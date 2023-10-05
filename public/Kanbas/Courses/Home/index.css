@@ -1,0 +1,52 @@
+.wd-flex-grow-1 .d-grid button {
+border-radius: 0%;
+background-color: lightgray;
+color: black;
+
+}
+
+.wd-flex-grow-1 .dropdown-menu {
+    background-color: gray;
+}
+
+.wd-flex-grow-1 .second-list {
+    padding-left: 50px;
+}
+.wd-flex-grow-1 .second-list a {
+    color: red;
+}
+
+.d-grid .joint{
+    margin: 0px;
+    border-radius: 0px;
+    background-color: lightgray;
+    border: none;
+}
+
+#published{
+    background-color: #8fbc8f;
+}
+
+.list-group-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.course-status .cs li a i {
+    margin-right: 5px;
+}
+
+.course-status .grade li {
+
+    color: red;
+    border: none;
+}
+
+.course-status .coming-up li {
+
+    color: red;
+    border: none;
+}
+.modules .top button {
+    border: none;
+}

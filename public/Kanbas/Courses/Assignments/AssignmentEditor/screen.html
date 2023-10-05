@@ -1,89 +1,193 @@
-<table border="1" width="100%">
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                    <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-                    <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css">
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="wd-flex-row-container">
+        <div class="wd-bg-color-black">
+            <link rel="stylesheet" href="index.css">
+            <link rel="stylesheet" href="../../styles.css">
+            <link rel="stylesheet" href="index.css">
+            <link rel="stylesheet" href="../../styles.css">
+            <ul class="wd-kanbas-navigation">
+                <li><a href="/Kanbas/Account/Profile/screen.html">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        Account
+                    </a></li>
+                <li><a href="/Kanbas/Dashboard/screen.html">
+                        <i class="fa fa-tachometer" aria-hidden="true"></i>
+                        Dashboard<br>
+                    </a></li>
+                <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">
+                        <i class="fa fa-book" aria-hidden="true"></i><br>
+                        Courses
+                    </a></li>
+                <li><a href="#">
+                        <i class="fa fa-calendar" aria-hidden="true"></i><br>
+                        Calendar
+                    </a></li>
+                <li><a href="#">
+                        <i class="fa fa-inbox" aria-hidden="true"></i><br>
+                        Inbox
+                    </a></li>
+                <li><a href="#">
+                        <i class="fa fa-clock-o" aria-hidden="true"></i><br>
+                        History
+                    </a></li>
+                <li><a href="#">
+                        <i class="fa fa-desktop" aria-hidden="true"></i><br>
+                        Studio
+                    </a></li>
+                <li><a href="#">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i><br>
+                        Commons
+                    </a></li>
+                <li><a href="#">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i><br>
+                        Help
+                    </a></li>
             </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-                <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Vide</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaboration</a></li>
-                <li><a href="#">System</a></li>
-                <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <label for="assignmentName"><h3>Assignment Name</h3><br />
-                <input value="Assignment 1 - HTML" id="assignmentName" placeholder="Assignment name"/>
-                <h3>Description</h3>
-               <textarea cols="50" rows="5">This is the first assignment to build Kanbas.
-               </textarea>
-               <h3>Points</h3>
-               <input value="100" type="number" max="100" min="50">
-               <h3>Assignment Group</h3>
-               <select>
-                   <option value="ASSIGNMENTS">ASSIGNMENTS</option>
-               </select>
-               <h3>Display Grade in</h3>
-               <select>
-                   <option value="Percentage">Percentage</option>
-               </select>
-               <h3>Submission Type</h3>
-               <input type="checkbox" id="textEntry"><label for="textEntry">Text Entry</label><br>
-               <input type="checkbox" id="websiteURLs"><label for="websiteURLs">Website URLs</label><br>
-               <input type="checkbox" id="mediaRecordings"><label for="mediaRecordings">Media Recordings</label><br>
-               <input type="checkbox" id="fileUploads"><label for="fileUploads">>File Uploads</label><br>
-               <h3>Submission Attempts</h3>
-               <select>
-                   <option value="Unlimited">Unlimited</option>
-               </select>
-               <h3>Plagiarism Review</h3>
-               <select>
-                   <option value="None">None</option>
-               </select>
-               <label for="groupAssignment"><h3>Group Assignment</h3></label>
-               <input id="groupAssignment" type="checkbox">
-               <label for="peerReviews"><h3>Peer Reviews</h3></label>
-               <input id="peerReviews" type="checkbox">
-               <h3>Assign</h3>
-               <h3>Assign to</h3>
-               <input type="text" value="Everyone">
-               
-               <h3>Due</h3>
-               <input type="date" value="01/01/2023">
-               
-               <h3>Available Frome</h3>
-               <input type="date" value="01/01/2023">
-               
-               <h3>Until</h3>
-               <input type="date" value="01/01/2023"><br><br>
-               
-               
-               <button>Cancel</button>
-               <button>Save</button>
-        </td>
-    </tr>
-</table>
+        </div>
+        <div class="row" style="margin-left: 0;">
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="fa fa-bars" aria-hidden="true"
+                                    style="color: red; padding-top: 30px; padding-left: 30px; padding-right: 30px;"></i>CS5610.11744.23210</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page"
+                            style="padding-top: 25px; padding-left: 25px;">Assignments</li>
+                        <button class="btn-primary gray"
+                            style="border: none; float: right; position: absolute; margin-left: 80%; margin-top: 20px;">
+                            <i class="fa fa-eye" aria-hidden="true"></i>Student View</button>
+                    </ol>
+                    <hr />
+                </nav>
+            </div>
+            <div class="col-2">
+                <ul class="wd-course-navigation">
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                    <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li class="wd-active"><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaboration</a></li>
+                    <li><a href="#">System</a></li>
+                    <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html">Settings</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col top-buttons">
+                        <button type="button" class="btn-primary" style="height: 66%; float: right;"><i class="fa fa-ellipsis-v"
+                                aria-hidden="true" style="color: black;"></i></button>
+                    </div>
+                </div>
+                <hr />
+                <span style="padding: 10px;">Assignment Name</span>
+                <div class="input-group mb-3" style="padding: 10px;">
+                    <input type="text" class="form-control" placeholder="A1 ENV + HTML" aria-label="assignmentName"
+                        aria-describedby="basic-addon1">
+                </div><br>
+                <div class="input-group" style="padding: 10px;">
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-2" style="margin-top: 5px;">
+                        <div style="margin: 20px;">Points</div>
+                        <div style="margin: 20px;">Assignment Group</div>
+                        <div style="margin: 20px;">Display Grade as</div>
+                        <div style="margin-top: 60px; margin-left: 20px; margin-right: 20px; margin-bottom: 20px;">
+                            Submission Type</div>
+                        <div style="margin: 20px; margin-top: 325px;">Submission Attempts</div>
+                        <div style="margin: 20px;">Display Grade as</div>
+                        <div style="margin: 20px;">Plagiarism Review</div>
+                        <div style="margin: 20px;">Due</div>
+                        <div style="margin: 20px; margin-top: 35px;">Available From</div>
+                        <div style="margin: 20px; margin-top: 35px;">Until</div>
+                    </div>
+                    <div class="col-9">
+                        <input type="text" class="form-control" placeholder="100" aria-label="Username"
+                            aria-describedby="basic-addon1" style="margin: 20px;">
+                        <select class="form-select" aria-label="Default select example" style="margin: 20px;">
+                            <option selected>ASSIGNMENTS</option>
+                            <option value="1">QUIZZES</option>
+                            <option value="2">PROJECT</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <select class="form-select" aria-label="Default select example" style="margin: 20px;">
+                            <option selected>Percentage</option>
+                            <option value="1">Marks</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <input type="checkbox" aria-label="Checkbox for following text input" style="margin: 20px;"> Do
+                        not count this assignment towards the final grade.
+
+                        <div style="border: 1px solid #e5e4e2; padding: 20px;">
+                            <select class="form-select" aria-label="Default select example" style="margin: 20px; width: 50%;">
+                                <option selected>Online</option>
+                                <option value="1">Offline</option>
+                                <option value="2">Hybrid</option>
+                            </select>
+                            <input type="checkbox" aria-label="Checkbox for following text input" style="margin: 20px;"
+                                checked> Text Entry <br>
+                            <input type="checkbox" aria-label="Checkbox for following text input" style="margin: 20px;"
+                                checked> Website URL <br>
+                            <input type="checkbox" aria-label="Checkbox for following text input" style="margin: 20px;"
+                                checked> Media Recordings <br>
+                            <input type="checkbox" aria-label="Checkbox for following text input" style="margin: 20px;">
+                            Student Annotation <br>
+                            <input type="checkbox" aria-label="Checkbox for following text input" style="margin: 20px;">
+                            File Uploads <br>
+
+
+                        </div>
+
+                        <input type="number" class="form-control" placeholder="100" aria-label="Username"
+                            aria-describedby="basic-addon1" max="100" min="50" style="margin: 20px;">
+                        <select class="form-select" aria-label="Default select example"
+                            style="margin: 20px; margin-top: 30px;">
+                            <option selected>Assigment Group</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <select class="form-select" aria-label="Default select example"
+                            style="margin: 20px; margin-top: 30px;">
+                            <option selected>None</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <input type="date" class="form-control" placeholder="10/19/2023" aria-label="date"
+                            aria-describedby="basic-addon1" style="margin: 20px;">
+                        <input type="date" class="form-control" placeholder="10/24/2023" aria-label="date"
+                            aria-describedby="basic-addon1" style="margin: 20px;">
+                        <input type="date" class="form-control" placeholder="10/26/2023" aria-label="date"
+                            aria-describedby="basic-addon1" style="margin: 20px;">
+
+                        <button class="btn-primary">Cancel</button>
+                        <button class="btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
