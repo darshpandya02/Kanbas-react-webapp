@@ -1,12 +1,16 @@
+import { useSelector } from "react-redux";
+
 function Destructing() {
   const person = { name: "John", age: 25 };
   const { name, age } = person;
   const numbers = ["one", "two", "three"];
   const [first, second, third] = numbers;
+  const { message } = useSelector((state) => state.helloReducer);
   return (
     <div>
       <h2>Destructing</h2>
       <h3>Object Destructing</h3>
+      <h4>{message}</h4>
       const &#123; name, age &#125; = &#123; name: "John", age: 25 &#125;
       <br />
       <br />

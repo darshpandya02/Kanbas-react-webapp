@@ -10,10 +10,10 @@
 }
 .wd-course-navigation a {
   padding-left: 10px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px;
   margin-top: 10px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 10px; */
   border: none;
 }
 .wd-course-navigation a.active {
