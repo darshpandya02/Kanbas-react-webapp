@@ -14,28 +14,46 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
-import {AiOutlineMenu} from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({courses}) {
+function Courses() {
   const { courseId } = useParams();
+  const URL = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   const { pathname } = useLocation();
   // const [empty, kanbas, courses, id, screen] = pathname.split("/");
-  const course = courses.find((course) => course._id === courseId);
+  // const course = courses.find((course) => course._id === courseId);
   return (
     <div>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item" style={{color: 'red', paddingTop: '25px', paddingLeft: '25px', paddingRight: '10px'}}>
+          <li
+            class="breadcrumb-item"
+            style={{
+              color: "red",
+              paddingTop: "25px",
+              paddingLeft: "25px",
+              paddingRight: "10px",
+            }}>
             <a href="#">
-              <AiOutlineMenu style={{marginRight: '10px'}} />
+              <AiOutlineMenu style={{ marginRight: "10px" }} />
               CS5610.11744.23210
             </a>
           </li>
           <li
             class="breadcrumb-item active"
             aria-current="page"
-            style={{paddingTop: '25px', paddingLeft: '25px'}}
-          >
+            style={{ paddingTop: "25px", paddingLeft: "25px" }}>
             Modules
           </li>
         </ol>
@@ -51,8 +69,7 @@ function Courses({courses}) {
           style={{
             left: "320px",
             top: "70px",
-          }}
-        >
+          }}>
           <Routes>
             <Route path="/" element={<Navigate to="Home" />} />
             <Route path="Home" element={<Home />} />

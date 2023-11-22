@@ -73,7 +73,9 @@ function Dashboard({
       <button className="btn btn-outline-success" onClick={addNewCourse}>
         Add
       </button>
-      <button className="btn btn-outline-warning" onClick={updateCourse}>
+      <button
+        className="btn btn-outline-warning"
+        onClick={() => updateCourse(course)}>
         Update
       </button>
 
@@ -81,10 +83,7 @@ function Dashboard({
       <div class="row row-cols-1 row-cols-xxxl-3 list-group">
         <div className="col">
           {courses.map((course) => (
-            <Link
-              key={course._id}
-              to={`/Kanbas/Courses/${course._id}`}
-              className="list-group-item">
+            <div key={course._id} className="list-group-item">
               <button
                 className="btn btn-outline-warning"
                 onClick={(event) => {
@@ -96,14 +95,11 @@ function Dashboard({
 
               <button
                 className="btn btn-outline-danger"
-                onClick={(event) => {
-                  event.preventDefault();
-                  deleteCourse(course._id);
-                }}>
+                onClick={() => deleteCourse(course)}>
                 Delete
               </button>
 
-              <div class="card h-100">
+              <Link class="card h-100" to={`/Kanbas/Courses/${course._id}`}>
                 <img
                   src="/images/teslabot.jpeg"
                   class="card-img-top"
@@ -112,8 +108,8 @@ function Dashboard({
                 <div class="card-body">
                   <h5 class="card-title">{course.name}</h5>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           ))}
         </div>
       </div>
