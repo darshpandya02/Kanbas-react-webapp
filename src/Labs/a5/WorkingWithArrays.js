@@ -19,7 +19,7 @@ function WorkingWithArrays() {
     onChange={(e) => setTodo({ ...todo, id: e.target.value })}
   />;
 
-  const API = "http://localhost:4000/a5/todos";
+  const API = "https://kanbas-node-server-app-qcek.onrender.com/a5/todos";
 
   // const fetchTodosPromise = () => {
   //   const promise = axios.get(API);
@@ -34,7 +34,9 @@ function WorkingWithArrays() {
   };
 
   const fetchTodos = async () => {
-    const response = await axios.get("http://localhost:4000/a5/todos");
+    const response = await axios.get(
+      "https://kanbas-node-server-app-qcek.onrender.com/a5/todos"
+    );
     setTodos(response.data);
   };
 
@@ -53,7 +55,6 @@ function WorkingWithArrays() {
     const response = await axios.get(`${API}/${id}`);
     setTodo(response.data);
   };
-
 
   const deleteTodo = async (todo) => {
     try {
@@ -245,7 +246,7 @@ function WorkingWithArrays() {
         onChange={(e) => setTitle(e.target.value)}
       /> */}
       <a
-        href={`http://localhost:4000/a5/todos/${id}/title/${title}`}
+        href={`https://kanbas-node-server-app-qcek.onrender.com/a5/todos/${id}/title/${title}`}
         className="btn btn-primary">
         Update Todo Title
       </a>
@@ -273,12 +274,14 @@ function WorkingWithArrays() {
         onChange={(e) => setId(e.target.value)}
       />
       <a
-        href={`http://localhost:4000/a5/todos/${id}`}
+        href={`https://kanbas-node-server-app-qcek.onrender.com/a5/todos/${id}`}
         className="btn btn-primary">
         Fetch Todo {id}
       </a>
       <h2>Fetch Array</h2>
-      <a href="http://localhost:4000/a5/todos" className="btn btn-primary">
+      <a
+        href="https://kanbas-node-server-app-qcek.onrender.com/a5/todos"
+        className="btn btn-primary">
         Fetch Todos
       </a>
     </div>

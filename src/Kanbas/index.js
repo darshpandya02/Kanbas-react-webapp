@@ -14,7 +14,7 @@ import { useEffect } from "react";
 function Kanbas() {
   // const { courseId } = useParams();
   const [courses, setCourses] = useState([]);
-  const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-node-server-app-qcek.onrender.com/api/courses";
 
   const [course, setCourse] = useState({
     name: "New Course",

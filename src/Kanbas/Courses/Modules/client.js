@@ -1,6 +1,6 @@
 import axios from "axios";
-// const COURSES_URL = "http://localhost:4000/api/courses";
-// const MODULES_URL = "http://localhost:4000/api/modules";
+// const COURSES_URL = "https://kanbas-node-server-app-qcek.onrender.com/api/courses";
+// const MODULES_URL = "https://kanbas-node-server-app-qcek.onrender.com/api/modules";
 const API_BASE = process.env.REACT_APP_API_BASE;
 const MODULES_URL = `https://kanbas-node-server-app-qcek.onrender.com/api/modules`;
 const COURSES_URL = `https://kanbas-node-server-app-qcek.onrender.com/api/courses`;
@@ -25,5 +25,3 @@ export const updateModule = async (module) => {
   const response = await axios.put(`${MODULES_URL}/${module._id}`, module);
   return response.data;
 };
-
-
