@@ -9,6 +9,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import axios from "axios";
 import { useEffect } from "react";
+import Signin from "../users/signin";
 // import { useParams } from "react-router-dom";
 
 function Kanbas() {
@@ -76,6 +77,7 @@ function Kanbas() {
           <Routes>
             <Route path="/" element={<Navigate to="Dashboard" />} />
             <Route path="Account" element={<Account />} />
+            <Route path="/signin" element={<Signin />} />
             <Route
               path="Dashboard"
               element={
