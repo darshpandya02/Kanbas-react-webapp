@@ -4,8 +4,10 @@ import * as client from "./client";
 function Signup() {
   const [error, setError] = useState("");
   const [credentials, setCredentials] = useState({
+    id: "",
     username: "",
     password: "",
+    role: "USER",
   });
   const navigate = useNavigate();
   const signup = async () => {
@@ -13,7 +15,7 @@ function Signup() {
       await client.signup(credentials);
       navigate("/project/account");
     } catch (err) {
-      setError(err.response);
+      setError(err.response.data.message);
     }
   };
   return (
