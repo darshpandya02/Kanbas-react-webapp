@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as client from "./client";
 function Signup() {
   const [error, setError] = useState("");
@@ -13,7 +13,7 @@ function Signup() {
       await client.signup(credentials);
       navigate("/project/account");
     } catch (err) {
-      setError(err.response.data.message);
+      setError(err.response);
     }
   };
   return (
@@ -43,9 +43,11 @@ function Signup() {
           })
         }
       />
-      <button className="btn btn-success h-100" onClick={signup}>
-        Signup
-      </button>
+      <Link to="/project/signin">
+        <button className="btn btn-success h-100" onClick={signup}>
+          Signup
+        </button>
+      </Link>
     </div>
   );
 }
