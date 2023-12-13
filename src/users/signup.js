@@ -43,11 +43,9 @@ function Signup() {
           })
         }
       />
-      <Link to="/project/signin">
         <button className="btn btn-success h-100" onClick={signup}>
           Signup
         </button>
-      </Link>
     </div>
   );
 }
