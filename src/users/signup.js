@@ -4,7 +4,7 @@ import * as client from "./client";
 function Signup() {
   const [error, setError] = useState("");
   const [credentials, setCredentials] = useState({
-    id: "",
+    _id: "",
     username: "",
     password: "",
     role: "USER",
